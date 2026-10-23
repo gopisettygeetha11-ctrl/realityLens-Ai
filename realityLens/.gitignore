@@ -1,0 +1,45 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+ai_places_app/.streamlit/secrets.toml
+delivery_apps/.streamlit/secrets.toml
+
+# IDE & Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Deployment build caches
+.vercel/
+.render/
+
+# Archives and legacy backups
+archive/
+*.zip
+*.tar.gz
+*.rar
+*.7z

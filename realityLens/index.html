@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RealityLens AI | Fact Check Suite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F4F8F6;
+      --card-bg: #FFFFFF;
+      --primary: #176D4A;
+      --primary-dark: #123B2C;
+      --accent: #25845B;
+      --accent-soft: #E4F2E9;
+      --border: #D4E3DA;
+      --text: #20332C;
+      --text-muted: #526A5E;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #E4F2E9 0%, #FFFFFF 52%, #E8F1FA 100%);
+      border: 1px solid #BFD8C9;
+      border-radius: 20px;
+      padding: 48px 24px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(25, 65, 47, 0.06);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #DDF4E5;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--primary-dark);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    header p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(25, 65, 47, 0.08);
+      border-color: #A9D4BF;
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+    .card h2 {
+      font-size: 1.55rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+      font-weight: 750;
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 20px;
+    }
+    .features-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+    .features-list li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .features-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .code-box {
+      background: #F4F8F6;
+      border: 1px solid #D4E3DA;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-family: monospace;
+      font-size: 0.88rem;
+      color: #153F32;
+      margin-bottom: 18px;
+      word-break: break-all;
+    }
+    .deploy-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      margin-top: 32px;
+    }
+    .deploy-section h3 {
+      color: var(--primary-dark);
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+    .deploy-section ol {
+      margin-left: 20px;
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+    .deploy-section ol li {
+      margin-bottom: 8px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">✓ Verified Intelligence</div>
+      <h1>RealityLens AI</h1>
+      <p>Independent review verification, friction detection, and fact-checking intelligence suite.</p>
+    </header>
+
+    <div class="grid">
+      <!-- Project 1 -->
+      <div class="card">
+        <div>
+          <span class="card-tag">Project 1</span>
+          <h2>AI Places & Hotels</h2>
+          <p>Fact-checking and sentiment breakdown for Andhra Pradesh hotels, restaurants, and residential developments.</p>
+          <ul class="features-list">
+            <li>Andhra Pradesh regional catalogue (Vizag, Vijayawada, Tirupati)</li>
+            <li>Multi-perspective analysis (Family, Professional, Student)</li>
+            <li>Side-by-side venue comparison metrics</li>
+            <li>Optional OpenAI-powered strategic recommendations</li>
+          </ul>
+        </div>
+        <div>
+          <div class="code-box">streamlit run ai_places_app/app.py</div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="card">
+        <div>
+          <span class="card-tag">Project 2</span>
+          <h2>Delivery & E-Commerce Apps</h2>
+          <p>Fact-checking platform experiences for Swiggy, Zomato, Blinkit, Zepto, BigBasket, Amazon, and Flipkart.</p>
+          <ul class="features-list">
+            <li>Food delivery, quick-commerce & e-commerce coverage</li>
+            <li>Heuristic detection of order delays, missing items & refunds</li>
+            <li>Direct multi-platform performance comparison</li>
+            <li>Optional OpenAI-powered operational action plan</li>
+          </ul>
+        </div>
+        <div>
+          <div class="code-box">streamlit run delivery_apps/app.py</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deploy-section">
+      <h3>Streamlit Deployment Guide (Streamlit Community Cloud)</h3>
+      <ol>
+        <li>Push this repository to your GitHub account.</li>
+        <li>Visit <a href="https://share.streamlit.io" target="_blank" style="color: var(--primary); font-weight: 600;">share.streamlit.io</a> and sign in with GitHub.</li>
+        <li>Click <strong>New app</strong> and select this repository.</li>
+        <li>For the Places app: set <strong>Main file path</strong> to <code>ai_places_app/app.py</code></li>
+        <li>For the Delivery app: deploy another instance with <strong>Main file path</strong> set to <code>delivery_apps/app.py</code></li>
+        <li>Click <strong>Deploy</strong> &mdash; your apps will be live with instant WebSockets and HTTPS!</li>
+      </ol>
+    </div>
+
+    <footer>
+      RealityLens AI &copy; 2026 &bull; Independent Fact-Check & Experience Evaluation System
+    </footer>
+  </div>
+</body>
+</html>
